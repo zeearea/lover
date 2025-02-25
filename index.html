@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You ❤️</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .text {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            color: pink;
+            opacity: 0; /* Awalnya tidak terlihat */
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+            transform-origin: center;
+            transition: opacity 0.5s ease-in-out; /* Efek muncul bertahap */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="heartContainer"></div>
+
+    <script>
+        const container = document.getElementById('heartContainer');
+        const numPoints = 500; // Jumlah teks untuk membentuk hati
+        const text = "I LOVE YOU";
+        const radius = 20;
+
+        let points = []; // Array untuk menyimpan elemen teks
+
+        for (let i = 0; i < numPoints; i++) {
+            const span = document.createElement('span');
+            span.className = 'text';
+            span.innerText = text;
+
+            let angle = (Math.PI * 2 * i) / numPoints;
+            let x = 16 * Math.pow(Math.sin(angle), 3) * radius;
+            let y = -(13 * Math.cos(angle) - 5 * Math.cos(2 * angle) - 2 * Math.cos(3 * angle) - Math.cos(4 * angle)) * radius;
+
+            span.style.left = `${x + 250}px`;
+            span.style.top = `${y + 250}px`;
+
+            container.appendChild(span);
+            points.push(span);
+        }
+
+        function revealText(index) {
+            if (index < points.length) {
+                points[index].style.opacity = 1;
+                setTimeout(() => revealText(index + 1), 10); // Teks muncul satu per satu
+            } else {
+                startRotation(); // Setelah semua teks muncul, mulai rotasi
+            }
+        }
+
+        function startRotation() {
+            let angle = 0;
+            function animate() {
+                angle += 0.005; // Rotasi lebih smooth
+                container.style.transform = `rotate(${angle}rad)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
+        }
+
+        // Mulai efek muncul setelah 1 detik
+        setTimeout(() => revealText(0), 1000);
+    </script>
+</body>
+</html>
