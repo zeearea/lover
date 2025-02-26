@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://feeldreams.github.io/heihbd/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>buat mahesa</title>
+<link rel="icon" type="image/x-icon" href="https://malasid.github.io/favicon.png">
+<meta name="description" content="HTML Bucin ">
+
+</head>
+<body>
+  
+   <!-- Ganti Audio di sini -->
+   <audio src="https://ia801807.us.archive.org/8/items/taylor-swift-playlist-updated-WINTERBEAR98/1-09_Love_Story.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://rare-gallery.com/mocahbig/395509-nct-dream-hot-sauce-jeno-4k-pc-wallpaper.jpg" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="kadoIn">
+       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>
+     </div>
+     <p id="ket">Klik Kadonya!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://media.tenor.com/DgGqZuLukMUAAAAM/jeno-jeno-nct.gif" id="fotostiker"/>
+         <img src="https://media.tenor.com/s3gai09zjigAAAAM/jeno-nct.gif" id="fotostiker1"/>
+         <img src="https://media.tenor.com/cVSOliCTCugAAAAM/jeno-valen-jeno.gif" id="fotostiker2"/>
+         <img src="https://media.tenor.com/YABLyfIZ6CIAAAAM/jeno-lee-jeno.gif" id="fotostiker3"/>
+         <img src="https://media.tenor.com/dV24u5igrjUAAAA1/jeno-lee-jeno.webp" id="fotostiker4"/>
+         <img src="https://media.tenor.com/HIGF_xCudiYAAAAM/lee-jeno.gif" id="fotostiker5"/>
+         
+         <img src="https://media.tenor.com/5TKciWMl870AAAAM/hello-future-nct-dream.gif" id="fotostiker6"/>
+     </div>
+     
+     <p id="halo" class="halo"></p>
+     
+     <div><blockquote id='bq' data-text='㋡'>
+       <p id="kalimat">Zee punya sesuatu buat mas ❤️</p>
+
+       <p id="pesan1">Klik dulu 4 LOVE di Bawah! ❤️</p>
+       <div id="kolombaru">
+         <li id="lv1">🤍</li>
+         <li id="lv2">🤍</li>
+         <li id="lv3">🤍</li>
+         <li id="lv4">🤍</li>
+       </div>
+
+       <p id="pesan2">Tunggu...</p>
+       <!-- Pesan -->
+       <p id="pesan3">Ciee.. Nungguin yaa🤣❤️</p>
+       <p id="pesan4">I LOVE U <3 </p>
+       <p id="pesan5" class="gaya2">Zee salting dikit hehe</p>
+       <p id="pesan6" class="gaya2">My love, thank you for being my safe place, my joy, and my greatest blessing. Every moment with you feels like a beautiful dream I never want to wake up from❤️</p>
+       <p id="pesan7" class="gaya2">Your love fills my heart with warmth, and your presence makes every day brighter. I’m endlessly grateful for you—your kindness, your laughter, and the way you make life feel so magical.</p>
+
+       <p id="pesan8" class="gaya2">I love you more than words can ever express, today and always.❤️</p>
+       <p id="pesan9" class="gaya2">As we walk this journey together, I pray that life grants you endless joy, abundant blessings, and unwavering strength. May your days be filled with love, success, and everything your heart desires. No matter what the future holds, know that I will always be here, loving you more with each passing day. You are my forever, my greatest blessing, and the love of my life.❤️</p>
+       <p id="pesan10" class="gaya2">I LOVE U 3000 </p>
+
+       <!-- Tombol Lanjut -->
+       <p id="opsL">Klik untuk Lanjut</p>
+     </blockquote></div>
+
+     <!-- Tombol Kirim Pesan -->
+     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
+
+     <!-- Pesan Tambahan -->
+     <p id="katatambahan" class="sembunyi">Hadiahnya adalah "walaupun mas kayak wedusss tapi aku tetep sayanggg" 😜</p>
+     
+     <!-- Pesan Ditolak -->
+     <div id="pesanditolak">
+       <img id="stikerditolak" src="https://media.tenor.com/VTavf4TTbnsAAAAM/jeno-nct-jeno.gif"/>
+       <p id="kataditolak">Yaudah kalo gamau mh 😜</p>
+     </div>
+
+   </div>
+
+<script>
+  const body = document.querySelector("body");const swalst = Swal.mixin({timer: 2300, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageHeight: 90,}); audio = new Audio('' + linkmp3.src); ftganti=0;fungsi=0;fungsiAwal=0;deffotostiker=fotostiker.src;function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-snowflake"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-snowflake"); if (heartArr.length > 100) {heartArr[0].remove()}},100);Content.style = "opacity:1;margin-top:16vh"; const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageHeight: 80,}); 
+  
+  document.getElementById("kadoIn").onclick = function() {if(fungsiAwal==0){audio.play();fungsiAwal=1;kadoIn.style="transition:all .8s ease;transform:scale(10);opacity:0";wallpaper.style="transform: scale(1.5);";ket.style="display:none";setTimeout(initengahan,300);setTimeout(inipesan,500)}}
+  
+  async function inipesan(){
+    var { value: nama } = await swals.fire({
+           title: 'Masukin Nama Kamu', input: 'text',
+       });
+       if(nama && nama.length < 11){
+         window.nama = nama;
+         vketikhalo="Mas " + nama + " ✨";
+         mulainama();
+         } else {
+           await swals.fire('Ups!', 'Nama tidak boleh kosong atau lebih dari 10 karakter, ya!');inipesan();
+    }
+  }
+
+  //Variable Pertanyaan Akhir
+  var tanya = ' Mau hadiah Ga? 😶❤️';
+  var opstanya = 'Ayo jawab ';
+  var tompositif = 'Mau';
+  var tomnegatif = 'Engga';
+    
+    async function menuju(){pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";await swals.fire('OK!', 'Kirim jawabannya ke TELEGRAM aku, ya!', 'success');window.location = "http://t.me/Usseernotfoundd" + pesan;}
+</script>
+<script src="https://malasid.github.io/html/hbd.js"></script>
+<!-- Sampai Sini -->
+</body>
+  </html>
